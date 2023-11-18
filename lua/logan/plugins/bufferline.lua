@@ -6,7 +6,7 @@ return {
 		options = {
 			offsets = {
 				{
-					filetype = "NvimTree",
+					filetype = "Neo Tree",
 					text = "Nvim Tree",
 					separator = false,
 					text_align = "left",
