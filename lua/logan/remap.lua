@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.opt.clipboard = "unnamedplus" -- Yank to clipboard
+vim.keymap.set("", "<leader>bn", vim.cmd.tabnext)
+vim.keymap.set("", "<leader>bb", vim.cmd.tabprev)
+vim.keymap.set("", "<leader>bc", vim.cmd.tabclose)
 
 -- Telescope (fuzzy finder)
 local builtin = require("telescope.builtin")
