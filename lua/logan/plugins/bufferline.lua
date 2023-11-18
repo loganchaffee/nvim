@@ -2,17 +2,23 @@ return {
 	"akinsho/bufferline.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	version = "*",
-	opts = {
-		options = {
-			offsets = {
-				{
-					filetype = "Neo Tree",
-					text = "Nvim Tree",
-					separator = false,
-					text_align = "left",
+	config = function()
+		require("bufferline").setup({
+			options = {
+				offsets = {
+					{
+						filetype = "NvimTree",
+						text = "Nvim Tree",
+						separator = true,
+						text_align = "left",
+					},
 				},
+				diagnostics = "nvim_lsp",
+				separator_style = { "", "" },
+				modified_icon = "●",
+				show_close_icon = false,
+				show_buffer_close_icons = false,
 			},
-			mode = "tabs",
-		},
-	},
+		})
+	end,
 }
