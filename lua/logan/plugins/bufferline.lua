@@ -4,8 +4,15 @@ return {
 	version = "*",
 	opts = {
 		options = {
+			offsets = {
+				{
+					filetype = "NvimTree",
+					text = "Nvim Tree",
+					separator = false,
+					text_align = "left",
+				},
+			},
 			mode = "tabs",
-			separator_style = "slant",
 		},
 	},
 }

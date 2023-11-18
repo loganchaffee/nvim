@@ -1,3 +1,4 @@
+local nvim_tree_api = require("nvim-tree.api")
 -- General
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
