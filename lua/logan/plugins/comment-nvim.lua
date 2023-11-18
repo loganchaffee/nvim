@@ -8,7 +8,7 @@ return {
 		require("Comment").setup({
 			toggler = {
 				---Line-comment toggle keymap
-				line = "/",
+				line = "<space>/",
 			},
 			opleader = {
 				-- Line-comment keymap
