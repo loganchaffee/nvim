@@ -6,6 +6,7 @@ vim.opt.clipboard = "unnamedplus" -- Yank to clipboard
 vim.keymap.set("", "<leader>bn", vim.cmd.tabnext)
 vim.keymap.set("", "<leader>bb", vim.cmd.tabprev)
 vim.keymap.set("", "<leader>bc", vim.cmd.tabclose)
+vim.keymap.set("", "<leader>h", vim.cmd.nohlsearch) -- Clear search hightlight
 
 -- Telescope (fuzzy finder)
 local builtin = require("telescope.builtin")
