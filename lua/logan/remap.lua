@@ -1,16 +1,18 @@
-local nvim_tree_api = require("nvim-tree.api")
 -- General
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.opt.clipboard = "unnamedplus" -- Yank to clipboard
-vim.keymap.set("", "<leader>bn", vim.cmd.tabnext)
-vim.keymap.set("", "<leader>bb", vim.cmd.tabprev)
-vim.keymap.set("", "<leader>bc", vim.cmd.tabclose)
+vim.keymap.set("", "<leader>bn", vim.cmd.bnext)
+vim.keymap.set("", "<leader>bb", vim.cmd.bprev)
+vim.keymap.set("", "<leader>c", vim.cmd.bw)
 vim.keymap.set("", "<leader>h", vim.cmd.nohlsearch) -- Clear search hightlight
 
 -- Telescope (fuzzy finder)
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
+vim.keymap.set("n", "<leader>sdf", function()
+	builtin.find_files({ hidden = true })
+end)
 vim.keymap.set("n", "<leader>st", builtin.live_grep, {})
 
 -- Lazy (plugin manager)
