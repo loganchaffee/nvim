@@ -8,6 +8,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
+		"dcampos/cmp-emmet-vim",
 	},
 	config = function()
 		local lsp_zero = require("lsp-zero")
@@ -33,6 +34,12 @@ return {
 		local cmp = require("cmp")
 
 		cmp.setup({
+			sources = {
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "luasnip" },
+				{ name = "emmet_vim" },
+			},
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered({
