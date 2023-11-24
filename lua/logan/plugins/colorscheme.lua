@@ -32,5 +32,6 @@ return {
 -- 		require("vscode").load()
 -- 		makeTransParent()
 -- 		vim.cmd.colorscheme("vscode")
+-- 		vim.cmd(":set number")
 -- 	end,
 -- }

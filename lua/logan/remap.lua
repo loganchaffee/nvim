@@ -23,3 +23,9 @@ vim.keymap.set("n", "<leader>M", vim.cmd.Mason)
 
 -- Nvim Tree
 vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
+
+-- Linting
+-- Toggle lint warning message in float window
+vim.keymap.set("n", "<leader>l", function()
+	vim.diagnostic.open_float(0, { scope = "line" })
+end)
