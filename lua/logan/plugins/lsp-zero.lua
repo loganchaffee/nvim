@@ -34,12 +34,6 @@ return {
 		local cmp = require("cmp")
 
 		cmp.setup({
-			sources = {
-				{ name = "nvim_lsp" },
-				{ name = "buffer" },
-				{ name = "luasnip" },
-				{ name = "emmet_vim" },
-			},
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered({
