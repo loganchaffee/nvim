@@ -7,7 +7,7 @@ return {
 			symbol = "▏",
 			draw = {
 				animation = function()
-					return 0
+					return 10
 				end,
 			},
 		})
