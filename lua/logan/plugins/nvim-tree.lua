@@ -50,6 +50,7 @@ return {
 				},
 			},
 			view = {
+				adaptive_size = true,
 				width = 30,
 				side = "left",
 			},
@@ -57,6 +58,9 @@ return {
 				open_file = {
 					quit_on_open = true,
 				},
+			},
+			git = {
+				ignore = false,
 			},
 		})
 	end,
