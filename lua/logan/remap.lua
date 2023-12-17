@@ -29,3 +29,6 @@ vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>l", function()
 	vim.diagnostic.open_float(0, { scope = "line" })
 end)
+
+-- Toggle git blame
+vim.keymap.set("n", "<leader>gb", vim.cmd.GitBlameToggle)
