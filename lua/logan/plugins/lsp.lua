@@ -159,7 +159,12 @@ return {
 
 		-- Border for on hover tips
 		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-			border = "single",
+			border = "rounded",
+		})
+
+		-- Add border to the diagnostic popup window
+		vim.diagnostic.config({
+			float = { border = "rounded" },
 		})
 	end,
 }
