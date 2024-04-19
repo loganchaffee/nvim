@@ -5,7 +5,7 @@ return {
 		local git_blame = require("gitblame")
 		require("lualine").setup({
 			options = {
-				theme = "catppuccin",
+				theme = "darkplus",
 				section_separators = { left = "", right = "" },
 			},
 			sections = {
