@@ -108,6 +108,8 @@ return {
 			clangd = {},
 			gopls = {},
 			pyright = {},
+			phpactor = {},
+
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 
 			lua_ls = {
@@ -144,6 +146,7 @@ return {
 				"lua_ls",
 				"html",
 				"gopls",
+				"phpactor",
 			},
 			handlers = {
 				function(server_name)
