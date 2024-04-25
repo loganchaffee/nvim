@@ -12,3 +12,6 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	end,
 	group = autocmd_group,
 })
+
+-- Tells treesitter to parse jsx file as tsx file. Fixes jsx syntax highligting
+vim.cmd("autocmd BufNewFile,BufRead *.jsx set filetype=typescript.tsx")
