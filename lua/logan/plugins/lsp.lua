@@ -109,6 +109,7 @@ return {
 			gopls = {},
 			pyright = {},
 			phpactor = {},
+			templ = {},
 
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 
@@ -147,6 +148,7 @@ return {
 				"html",
 				"gopls",
 				"phpactor",
+				"templ",
 			},
 			handlers = {
 				function(server_name)

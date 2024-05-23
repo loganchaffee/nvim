@@ -1,5 +1,5 @@
 -- Tells treesitter to parse jsx file as tsx file. Fixes jsx syntax highligting
-vim.cmd("autocmd BufNewFile,BufRead *.jsx set filetype=tsx")
+-- vim.cmd("autocmd BufNewFile,BufRead *.jsx set filetype=tsx")
 
 -- Create group to assign commands
 -- "clear = true" must be set to prevent loading an
