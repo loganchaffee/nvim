@@ -11,6 +11,29 @@ return {
 				enable = true,
 				update_cwd = true,
 			},
+			view = {
+				adaptive_size = true,
+				width = 30,
+				side = "left",
+			},
+			actions = {
+				open_file = {
+					quit_on_open = true,
+				},
+			},
+			git = {
+				ignore = false,
+			},
+			diagnostics = {
+				enable = true,
+				show_on_dirs = true,
+				icons = {
+					hint = "",
+					info = "",
+					warning = "",
+					error = "",
+				},
+			},
 			renderer = {
 				root_folder_modifier = ":t",
 				icons = {
@@ -38,29 +61,6 @@ return {
 						},
 					},
 				},
-			},
-			diagnostics = {
-				enable = true,
-				show_on_dirs = true,
-				icons = {
-					hint = "",
-					info = "",
-					warning = "",
-					error = "",
-				},
-			},
-			view = {
-				adaptive_size = true,
-				width = 30,
-				side = "left",
-			},
-			actions = {
-				open_file = {
-					quit_on_open = true,
-				},
-			},
-			git = {
-				ignore = false,
 			},
 		})
 	end,

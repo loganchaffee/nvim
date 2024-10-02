@@ -7,7 +7,7 @@ return {
 		"lunarvim/darkplus.nvim",
 	},
 	config = function()
-		local git_blame = require("gitblame")
+		-- local git_blame = require("gitblame")
 
 		local custom_darkplus = require("lualine.themes.darkplus")
 
@@ -16,16 +16,16 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = custom_darkplus,
-				section_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
 			},
-			sections = {
-				lualine_c = {
-					{
-						git_blame.get_current_blame_text,
-						cond = git_blame.is_blame_text_available,
-					},
-				},
-			},
+			-- sections = {
+			-- 	lualine_c = {
+			-- 		{
+			-- 			git_blame.get_current_blame_text,
+			-- 			cond = git_blame.is_blame_text_available,
+			-- 		},
+			-- 	},
+			-- },
 			extensions = { "nvim-tree" },
 		})
 	end,

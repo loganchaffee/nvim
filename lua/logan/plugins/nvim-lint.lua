@@ -1,15 +1,17 @@
 return {
 	"mfussenegger/nvim-lint",
-	event = { "BufReadPre", "BufNewFile" },
+	event = {
+		"BufReadPre",
+		"BufNewFile",
+	},
 	config = function()
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			svelte = { "eslint_d" },
+			javascript = { "eslint" },
+			typescript = { "eslint" },
+			javascriptreact = { "eslint" },
+			typescriptreact = { "eslint" },
 			python = { "pylint" },
 		}
 
@@ -23,9 +25,10 @@ return {
 		})
 
 		-- Hide inline lint warnings see remaps.lua for toggling lint messages
-		vim.diagnostic.config({ virtual_text = false }) -- workds in js/ts
-
+		-- js/ts
+		vim.diagnostic.config({ virtual_text = false })
+		-- lua
 		vim.lsp.handlers["textDocument/publishDiagnostics"] =
-			vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false }) -- works in lua
+			vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
 	end,
 }

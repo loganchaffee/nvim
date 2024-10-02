@@ -1,1 +1,2 @@
-return { "folke/which-key.nvim" }
+return {}
+-- return { "folke/which-key.nvim" }

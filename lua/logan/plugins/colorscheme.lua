@@ -1,4 +1,4 @@
-local function makeTransParent()
+function makeTransParent()
 	vim.cmd("au ColorScheme * hi Normal ctermbg=none guibg=none")
 	vim.cmd("au ColorScheme * hi SignColumn ctermbg=none guibg=none")
 	vim.cmd("au ColorScheme * hi NormalNC ctermbg=none guibg=none")

@@ -125,7 +125,6 @@ return {
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"typescript-language-server",
 				"lua_ls",
 				"html",
 				"gopls",

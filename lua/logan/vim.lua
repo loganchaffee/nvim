@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 vim.opt.number = true
 vim.wo.relativenumber = false
 
@@ -9,5 +10,5 @@ vim.o.expandtab = true
 vim.o.signcolumn = "yes:1"
 
 -- Spell Check
-vim.opt_local.spell = true
-vim.opt_local.spelllang = "en_us"
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
