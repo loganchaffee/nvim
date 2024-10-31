@@ -1,4 +1,4 @@
-function makeTransParent()
+function make_transparent()
 	vim.cmd("au ColorScheme * hi Normal ctermbg=none guibg=none")
 	vim.cmd("au ColorScheme * hi SignColumn ctermbg=none guibg=none")
 	vim.cmd("au ColorScheme * hi NormalNC ctermbg=none guibg=none")
@@ -14,7 +14,7 @@ return {
 	priority = 1000,
 	name = "darkplus",
 	config = function()
-		makeTransParent()
+		make_transparent()
 		vim.cmd("colorscheme darkplus")
 	end,
 }

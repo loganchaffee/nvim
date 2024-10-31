@@ -1,42 +1,40 @@
+local files_to_ignore = {
+	"help",
+	"alpha",
+	"dashboard",
+	"neo-tree",
+	"Trouble",
+	"trouble",
+	"lazy",
+	"mason",
+	"notify",
+	"toggleterm",
+	"lazyterm",
+	"NvimTree",
+	"lazyterm",
+}
+
+-- Draws gray lines for all indentations
 local blankline = {
 	"lukas-reineke/indent-blankline.nvim",
 	main = "ibl",
 	config = function()
-		vim.cmd([[highlight IndentBlanklineIndent1 guifg=#bd93f9 gui=nocombine]])
-
-		local hooks = require("ibl.hooks")
-		-- create the highlight groups in the highlight setup hook, so they are reset
-		-- every time the colorscheme changes
-		hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-			vim.api.nvim_set_hl(0, "Gray", { fg = "#404040" })
-		end)
-
 		require("ibl").setup({
 			indent = {
 				char = "▏",
 				tab_char = "▏",
-				highlight = { "Gray" },
 			},
-			scope = { enabled = true },
+			scope = {
+				enabled = false,
+			},
 			exclude = {
-				filetypes = {
-					"help",
-					"alpha",
-					"dashboard",
-					"neo-tree",
-					"Trouble",
-					"trouble",
-					"lazy",
-					"mason",
-					"notify",
-					"toggleterm",
-					"lazyterm",
-				},
+				filetypes = files_to_ignore,
 			},
 		})
 	end,
 }
 
+-- Draws white light for the indentation that the cursor is in
 local mini = {
 	"echasnovski/mini.nvim",
 	version = false,
@@ -50,20 +48,9 @@ local mini = {
 			},
 		})
 
+		-- Disable on certain file types
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = {
-				"help",
-				"alpha",
-				"dashboard",
-				"NvimTree",
-				"Trouble",
-				"trouble",
-				"lazy",
-				"mason",
-				"notify",
-				"toggleterm",
-				"lazyterm",
-			},
+			pattern = files_to_ignore,
 			callback = function()
 				vim.b.miniindentscope_disable = true
 			end,
