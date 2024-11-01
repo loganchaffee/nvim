@@ -12,6 +12,7 @@ end
 return {
 	"lunarvim/darkplus.nvim",
 	priority = 1000,
+	lazy = false,
 	name = "darkplus",
 	config = function()
 		make_transparent()
