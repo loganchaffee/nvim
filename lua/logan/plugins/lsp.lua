@@ -111,7 +111,15 @@ return {
 			},
 		}
 
-		require("mason").setup()
+		require("mason").setup({
+			ui = {
+				border = "rounded",
+				size = {
+					width = 0.8,
+					height = 0.8,
+				},
+			},
+		})
 
 		-- You can add other tools here that you want Mason to install
 		-- for you, so that they are available from within Neovim.

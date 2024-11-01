@@ -12,19 +12,16 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("logan.plugins")
-
--- require("lazy").setup({
--- 	-- importing directories
--- 	spec = {
--- 		{ import = "logan.plugins" },
--- 	},
--- 	-- ui config
--- 	ui = {
--- 		border = "single",
--- 		size = {
--- 			width = 0.8,
--- 			height = 0.8,
--- 		},
--- 	},
--- })
+require("lazy").setup({
+	spec = {
+		{ import = "logan.plugins" },
+	},
+	ui = {
+		border = "rounded",
+		title = "Lazy",
+		size = {
+			width = 0.8,
+			height = 0.8,
+		},
+	},
+})
